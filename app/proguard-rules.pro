@@ -19,3 +19,14 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# Xposed 入口（xposed_init 按类名加载，不能被重命名或移除）
+-keep class com.mln.momoxposed.MomoHookEntry {
+    *;
+}
+
+# Hook 类（在入口中直接实例化，保留所有成员）
+-keep class com.mln.momoxposed.hook.** { *; }
+
+# 缓存工具类
+-keep class com.mln.momoxposed.util.** { *; }

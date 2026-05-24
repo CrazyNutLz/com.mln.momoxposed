@@ -1,4 +1,4 @@
-# 墨墨Xposed ![Downloads](https://img.shields.io/github/downloads/Xposed-Modules-Repo/com.mln.momoxposed/total)
+# 墨墨Xposed ![Downloads](https://img.shields.io/github/downloads/Xposed-Modules-Repo/com.mln.momoxposed/total) ![Downloads](https://img.shields.io/github/downloads/mmmlllnnn/com.mln.momoxposed/total)
 
 是一个 LSPosed 插件 
 
@@ -6,13 +6,9 @@
 
 (仅支持lsposed 不支持任何免root框架)
 
-通过检测目标函数的特征来自动找到 hook 点，理论适配全部版本
+注意：首次打开请在app中停留的时间久一点！！！
 
-请注意：首次打开请在app中停留的时间久一点！！！
-
-
-(晚点更，懒惰了）
-
+最佳适配: 5.5.20
 
 ### 使用方式：
 
@@ -26,12 +22,23 @@
 
 <br>
 
-测试通过环境：Redmik50pro A13 XposedAPI 100 arm64-v8a
+
+### 测试通过环境：
+
+| 项目                  | 配置                          |
+|:---------------------|:-----------------------------|
+| 设备型号              | Redmi K50 Pro                |
+| CPU 架构              | arm64-v8a                    |
+| Android 版本          | Android 13 (A13)             |
+| LSPosed API           | 101                          |
+| Xposed Framework API | 82                           |
 
 ---
 
-原 app 存在加固和混淆，不易适配
-遂手搓特征检测，通过正则表达过滤可疑类，参数为空和返回值类型为 int 过滤可疑函数，逐个调用对比，返回值在600-10000区间得到真实的 hook 目标。
+原 app 存在加固和混淆，不易适配，
+遂手搓特征检测
+
+
 
 ![](./first-1.png) 
 ![](./first-2.png)
